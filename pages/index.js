@@ -102,7 +102,7 @@ const Home = () => {
                                 </div>
                                 <p className="text-neutralGrayishBlue">5 days ago</p>
                                 <div className="mt-2 border-[1px] border-neutralLightGrayishBlue2 rounded-[4px] bg-white py-[10px] px-4 text-neutralDarkGrayishBlue text-[0.825rem] cursor-pointer leading-[1.125rem] hover:bg-neutralLightGrayishBlue1 hover:border-neutralLightGrayishBlue1">
-                                    <p>Hello, thank you for setting up the Chess Club. I've been a member for few weeks now and I'm already having lots of fun and improving my game.</p>
+                                    <p>Hello, thank you for setting up the Chess Club. I&#39;ve been a member for few weeks now and I&#39;m already having lots of fun and improving my game.</p>
                                 </div>
                             </NotificationCard>
 
