@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const NotificationCard = (props) => {
     return (
-        <div className={`rounded-md ${ props.newNotification != 0 ? "bg-neutralVeryLightGrayishBlue" : "" } px-5 py-4`}>
+        <div className={`rounded-md ${ props.isNewNotification ? "bg-neutralVeryLightGrayishBlue" : "" } px-5 py-4`}>
             <div className="rounded-full w-[40px] h-[40px] relative float-left">
                 <Image
                     src={`/images/${props.image}`}
@@ -35,9 +35,9 @@ const Home = () => {
                 <link href="https://fonts.google.com/specimen/Plus+Jakarta+Sans" rel="stylesheet" />
             </Head>
 
-            <div className="w-full h-[100vh] bg-neutralVeryLightGrayishBlue flex align-middle justify-center py-12">
+            <div className="w-full h-[100vh] bg-gray-100 flex align-middle justify-center py-12">
                 <div className="max-w-[580px]">
-                    <div className="w-full rounded-lg bg-neutralWhite p-5">
+                    <div className="w-full rounded-xl bg-neutralWhite p-5">
                         <div className="flex justify-between items-center">
                             <h1 className="font-bold text-neutralVeryDarkBlue text-[1.25rem] flex space-x-2 items-center">
                                 <span>Notifications</span>
@@ -52,7 +52,7 @@ const Home = () => {
                         </div>
                         <div className="flex flex-col space-y-1 mt-5">
                             { /* Mark Webber notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-mark-webber.webp">
+                            <NotificationCard isNewNotification={ newNotification > 0 ? true : false } image="avatar-mark-webber.webp">
                                 <div className="flex flex-wrap">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Mark Webber</a> reacted to your recent post <a href="#" className="font-bold text-neutralDarkGrayishBlue hover:text-primaryBlue">My first tournament today!</a>
@@ -66,7 +66,7 @@ const Home = () => {
                             </NotificationCard>
                             
                             { /* Angela Gray notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-angela-gray.webp">
+                            <NotificationCard isNewNotification={ newNotification > 0 ? true : false } image="avatar-angela-gray.webp">
                                 <div className="flex">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Angela Gray</a> followed you
@@ -80,7 +80,7 @@ const Home = () => {
                             </NotificationCard>
 
                             { /* Jacob Thompson notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-jacob-thompson.webp">
+                            <NotificationCard isNewNotification={ newNotification > 0 ? true : false } image="avatar-jacob-thompson.webp">
                                 <div className="flex">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Jacob Thompson</a> has joined your group <a href="#" className="font-bold text-neutralDarkGrayishBlue hover:text-primaryBlue">Chess Club</a>
@@ -94,7 +94,7 @@ const Home = () => {
                             </NotificationCard>
 
                             { /* Rizky Hasanuddin notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-rizky-hasanuddin.webp">
+                            <NotificationCard isNewNotification={false} image="avatar-rizky-hasanuddin.webp">
                                 <div className="flex">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Rizky Hasanuddin</a> sent you a private message
@@ -107,7 +107,7 @@ const Home = () => {
                             </NotificationCard>
 
                             { /* Kimberly Smith notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-kimberly-smith.webp">
+                            <NotificationCard isNewNotification={false} image="avatar-kimberly-smith.webp">
                                 <div className="flex relative">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Kimberly Smith</a> commented on your picture
@@ -124,7 +124,7 @@ const Home = () => {
                             </NotificationCard>
 
                             { /* Nathan Perterson notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-nathan-peterson.webp">
+                            <NotificationCard isNewNotification={false} image="avatar-nathan-peterson.webp">
                                 <div className="flex">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Nathan Perterson</a> reacted to your recent post <a href="#" className="font-bold text-neutralDarkGrayishBlue hover:text-primaryBlue">5 end-game strategies to increase your win rate</a>
@@ -134,7 +134,7 @@ const Home = () => {
                             </NotificationCard>
 
                             { /* Anna Kim notification */ }
-                            <NotificationCard newNotification={newNotification} image="avatar-anna-kim.webp">
+                            <NotificationCard isNewNotification={false} image="avatar-anna-kim.webp">
                                 <div className="flex">
                                     <p className="text-neutralDarkGrayishBlue tracking-[0.2px]">
                                         <a href="#" className="font-bold text-black hover:text-primaryBlue">Anna Kim</a> left the group <a href="#" className="font-bold text-neutralDarkGrayishBlue hover:text-primaryBlue">5 end-game strategies to increase your win rate</a>
